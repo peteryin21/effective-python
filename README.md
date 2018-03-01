@@ -37,3 +37,28 @@ for key in colors:
       found=default
     return found
   ```
+  
+  ### Item 5: Know how to slice sequences
+  Basic form of slicing is `somelist[start:end]`. Start is inclusive, end is exclusive.
+  ```python
+  a = [1, 2, 3, 4, 5]
+  assert a[1:3] == [2, 3]
+  ```
+  - For slicing from beginning or end of list you can leave out the zero/final index.
+  ```python
+  a = [1, 2, 3, 4, 5]
+  assert a[1:] == [2, 3, 4, 5]
+  assert a[:3] == [1, 2, 3]
+  assert a[-2:] == [4, 5]
+  assert a[:-2] == [1, 2, 3]
+  ```
+  Slicing is forgiving of start or end indexes that are out of bounds.
+  ```python
+  a[1:50] == [2, 3, 4, 5]
+  ```
+  Assigning a new list to a list slice will replace the range in original sequence even if lengths are different.
+  ```python
+  a[1:5] = 9
+  assert a == [1, 9]
+  ```
+
