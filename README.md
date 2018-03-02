@@ -70,7 +70,7 @@ for key in colors:
  ```
  But avoid using them all together because it get really confusing.
  ```python
- a[1:4:2] == ????
+ a[1:4:2] == [2, 4]  # confusing!
  ```
   
 
