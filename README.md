@@ -61,4 +61,16 @@ for key in colors:
   a[1:5] = 9
   assert a == [1, 9]
   ```
+  
+  ### Item 6: Avoid Using start, end and stride in a Single Slice
+  Stride is a 3rd index you can use in a slice to take every nth term when slicing a sequence. `somelist[start:end:stride]`
+  ```python
+  a = [1, 2, 3, 4, 5]
+  assert a[::2] == [1, 3, 5]
+ ```
+ But avoid using them all together because it get really confusing.
+ ```python
+ a[1:4:2] == ????
+ ```
+  
 
